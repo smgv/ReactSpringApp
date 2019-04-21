@@ -20,3 +20,11 @@ export class SecondComponent extends Component {
         );
     }
 }
+
+export function ThirdComponent() {
+    return (
+        <div>
+            ThirdComponent
+      </div>
+    );
+}

@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-import FirstComponent, { SecondComponent } from './components/learning-components/firstcomponent'
+import FirstComponent, { SecondComponent, ThirdComponent } from './components/learning-components/firstcomponent'
+import Counter from './components/counters/Counter';
+import Parent from './components/examples/Test';
 import logo from './logo.svg';
 import './App.css';
 
-// JSX use Babel to compile it into next gen JS
-// Component Element should start with capital letter
-// it should have valid close of tag
-// All element should be wrapped in one parent element than only babel works
-// To use JSX we should import React
+
 class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* <LearningComponents></LearningComponents> */}
+        {/* <Counter></Counter> */}
+        {/* <Parent></Parent> */}
+      </div>
+    );
+  }
+}
+
+class LearningComponents extends Component {
+  render() {
+    return (
+      <div className="LearningComponents">
         My Hello World
-        <FirstComponent></FirstComponent>
+      <FirstComponent></FirstComponent>
         <SecondComponent></SecondComponent>
         <ThirdComponent></ThirdComponent>
       </div>
@@ -21,12 +31,5 @@ class App extends Component {
   }
 }
 
-function ThirdComponent() {
-  return (
-    <div>
-      ThirdComponent
-    </div>
-  );
-}
 
 export default App;
